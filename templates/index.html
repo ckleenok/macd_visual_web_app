@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📈 티커 분석기</title>
+</head>
+<body>
+  <h2>🎯 분석할 티커 입력</h2>
+  <form method="POST">
+    <input type="text" name="ticker" placeholder="예: AAPL" required>
+    <button type="submit">분석 시작</button>
+  </form>
+  {% if error %}
+    <p style="color: red;">{{ error }}</p>
+  {% endif %}
+</body>
+</html>
