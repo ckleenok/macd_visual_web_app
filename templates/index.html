@@ -15,9 +15,6 @@
     h2 {
       font-size: 1.8em;
     }
-    form {
-      margin-top: 1em;
-    }
     input[type="text"] {
       width: 100%;
       font-size: 1.2em;
@@ -44,5 +41,14 @@
 </head>
 <body>
   <h2>🎯 분석할 티커 입력</h2>
+
   <form method="POST">
-    <input type="text" name="ticker" placeholder
+    <input type="text" name="ticker" placeholder="예: AAPL" required>
+    <button type="submit">분석 시작</button>
+  </form>
+
+  {% if error %}
+    <p>{{ error }}</p>
+  {% endif %}
+</body>
+</html>
