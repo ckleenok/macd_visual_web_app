@@ -2,16 +2,47 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>📈 티커 분석기</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      padding: 1.5em;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8em;
+    }
+    form {
+      margin-top: 1em;
+    }
+    input[type="text"] {
+      width: 100%;
+      font-size: 1.2em;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      box-sizing: border-box;
+    }
+    button {
+      font-size: 1.1em;
+      padding: 0.5em 1.2em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    p {
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <h2>🎯 분석할 티커 입력</h2>
   <form method="POST">
-    <input type="text" name="ticker" placeholder="예: AAPL" required>
-    <button type="submit">분석 시작</button>
-  </form>
-  {% if error %}
-    <p style="color: red;">{{ error }}</p>
-  {% endif %}
-</body>
-</html>
+    <input type="text" name="ticker" placeholder
